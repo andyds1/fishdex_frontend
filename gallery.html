@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishDex - Gallery</title>
+    <link rel="stylesheet" href="assets/css/screen.css">
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="phone-screen">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="notch"></div>
+                <div class="icons">
+                    <span class="icon">📶</span>
+                    <span class="icon">📡</span>
+                    <span class="icon">🔋</span>
+                </div>
+            </div>
+
+            <div class="header">
+                <button class="back-btn" onclick="goBack()">←</button>
+                <h1>My Collection</h1>
+                <div style="width: 40px;"></div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalCatches">0</div>
+                    <div class="stat-label">Total Catches</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="uniqueSpecies">0</div>
+                    <div class="stat-label">Species</div>
+                </div>
+            </div>
+
+            <div class="gallery-container">
+                <div class="gallery-grid" id="galleryGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>

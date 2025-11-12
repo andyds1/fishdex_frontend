@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishDex - Upload</title>
+    <link rel="stylesheet" href="assets/css/screen.css">
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="phone-screen">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="notch"></div>
+                <div class="icons">
+                    <span class="icon">📶</span>
+                    <span class="icon">📡</span>
+                    <span class="icon">🔋</span>
+                </div>
+            </div>
+
+            <div class="header">
+                <button class="back-btn" onclick="goBack()">←</button>
+                <h1>Identify Fish</h1>
+            </div>
+
+            <div class="content">
+                <div class="preview" id="preview">
+                    <img id="previewImg" src="" alt="Preview">
+                </div>
+
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📷</div>
+                    <div class="upload-text">Click to upload image</div>
+                    <div class="upload-subtext">or drag and drop</div>
+                </div>
+
+                <input type="file" id="imageInput" accept="image/*">
+
+                <button class="upload-btn" id="uploadBtn" onclick="handleUpload()" disabled>
+                    Identify Fish
+                </button>
+
+                <div class="loading" id="loading">
+                    <div>🐠 Identifying...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>

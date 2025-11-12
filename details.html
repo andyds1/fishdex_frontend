@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishDex - Details</title>
+    <link rel="stylesheet" href="assets/css/screen.css">
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="phone-screen">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="notch"></div>
+                <div class="icons">
+                    <span class="icon">📶</span>
+                    <span class="icon">📡</span>
+                    <span class="icon">🔋</span>
+                </div>
+            </div>
+
+            <div class="header">
+                <button class="back-btn" onclick="goBack()">←</button>
+                <h1>Fish Details</h1>
+                <div style="width: 40px;"></div>
+            </div>
+
+            <div class="details-container">
+                <!-- Fish Card -->
+                <div class="fish-card-top">
+                    <div class="fish-image-container">
+                        <img id="fishImage" src="" alt="Fish">
+                    </div>
+                    <div class="fish-basic-info">
+                        <div class="fish-title" id="fishName">Loading...</div>
+                        <div class="fish-family" id="fishFamily"></div>
+                        
+                        <div class="info-grid">
+                            <div class="info-row">
+                                <span class="info-label">Family:</span>
+                                <span class="info-value" id="family">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Water Type:</span>
+                                <span class="info-value" id="waterType">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Size Range:</span>
+                                <span class="info-value" id="sizeRange">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Depth Range:</span>
+                                <span class="info-value" id="depthRange">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Environment:</span>
+                                <span class="info-value" id="environment">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Region:</span>
+                                <span class="info-value" id="region">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Conservation:</span>
+                                <span class="info-value" id="conservation">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">AI Accuracy:</span>
+                                <span class="info-value" id="aiAccuracy">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Captured:</span>
+                                <span class="info-value" id="captured">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="details-section">
+                    <h3 class="section-title">DESCRIPTION</h3>
+                    <p class="description-text" id="description"></p>
+                </div>
+
+                <!-- Color Description -->
+                <div class="details-section">
+                    <h3 class="section-title">APPEARANCE</h3>
+                    <p class="description-text" id="colorDescription"></p>
+                </div>
+
+                <!-- Conservation Status -->
+                <div class="details-section" id="conservationSection">
+                    <h3 class="section-title">CONSERVATION STATUS</h3>
+                    <p class="description-text" id="consStatusDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>

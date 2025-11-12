@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishDex - Home</title>
+    <link rel="stylesheet" href="assets/css/screen.css">
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="phone-screen">
+            <!-- Status Bar -->
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="notch"></div>
+                <div class="icons">
+                    <span class="icon">📶</span>
+                    <span class="icon">📡</span>
+                    <span class="icon">🔋</span>
+                </div>
+            </div>
+
+            <!-- App Content -->
+            <div class="app-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1>FishDex</h1>
+                </div>
+
+                <!-- Central Circle with Fish Icon -->
+                <div class="circle-container">
+                    <div class="circle-wrapper">
+                        <div class="circle circle-1"></div>
+                        <div class="circle circle-2"></div>
+                        <div class="circle circle-3"></div>
+                        <div class="circle circle-4" onclick="goToUpload()" style="cursor: pointer;">
+                            <div><img class="fish-icon" src="assets/images/sprites/fish.png" alt="Fish icon"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                 <button class="cta-button" onclick="goToChat()">
+                    Want to know more about your fish?
+                    <span style="font-size: 24px;">🐠</span>
+                </button>
+
+                <div class="recent-section">
+                    <div class="section-header">
+                        <h2>Recent catches</h2>
+                        <a href="#" class="view-all" onclick="goToGallery(event)">View all</a>
+                    </div>
+                    <div class="fish-grid" id="fishGrid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 // assets/js/pages/details.js
-// Hardcode device here per your setup
+// Hardcode device
 const API_BASE_URL = 'http://localhost:3000/api';
 const DEVICE_ID = 'testtest';
 
@@ -45,7 +45,6 @@ function safeText(elId, value, fallback = '-') {
 }
 
 export async function init() {
-    // read ?id=...
     const params = new URLSearchParams(window.location.search);
     const fishId = params.get('id');
 
@@ -79,23 +78,19 @@ export async function init() {
         const imageUrl = item.imageUrl || '';
         const capturedDate = item.timestamp || fish.captureTimestamp;
 
-        // Image
         const img = $('fishImage');
         if (img) img.src = imageUrl || '';
 
-        // Basic info
         safeText('fishName', fish.name, 'Unknown Fish');
         safeText('family', fish.family);
         safeText('waterType', fish.waterType);
 
-        // Size range
         const sizeRange =
             (fish.minSize != null || fish.maxSize != null)
                 ? `${fish.minSize ?? ''}${fish.minSize != null ? '-' : ''}${fish.maxSize ?? ''}cm`
                 : '-';
         safeText('sizeRange', sizeRange);
 
-        // Depth range
         const depthRange =
             (fish.depthRangeMin != null || fish.depthRangeMax != null)
                 ? `${fish.depthRangeMin ?? ''}${fish.depthRangeMin != null ? '-' : ''}${fish.depthRangeMax ?? ''}m`
@@ -106,18 +101,14 @@ export async function init() {
         safeText('region', fish.region);
         safeText('conservation', fish.conservationStatus);
 
-        // AI Accuracy
         const accuracy = (fish.aiAccuracy != null) ? `${fish.aiAccuracy}%` : '-';
         safeText('aiAccuracy', accuracy);
 
-        // Captured date
         safeText('captured', formatDate(capturedDate));
 
-        // Descriptions
         safeText('description', fish.description, 'No description available.');
         safeText('colorDescription', fish.colorDescription, 'No appearance description available.');
 
-        // Conservation status description
         const consStatusDesc = fish.consStatusDescription || fish.conservationStatus;
         const consEl = $('consStatusDescription');
         const consSection = $('conservationSection');

@@ -42,7 +42,7 @@ A mobile-first web application for identifying and cataloging fish species throu
 
 1. Clone the repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/andyds1/fishdex_frontend_htf2025.git
 cd fishdex-frontend
 ```
 

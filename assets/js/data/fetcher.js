@@ -1,6 +1,5 @@
 // assets/js/fetcher.js
 
-// --- FIXED CONFIG (as requested) ---
 export const API_BASE_URL = 'http://localhost:3000/api';
 export const DEVICE_ID = 'testtest';
 

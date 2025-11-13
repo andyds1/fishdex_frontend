@@ -51,13 +51,12 @@ export async function sendMessage() {
 
     try {
         const response = await sendChatMessage(text);
-
-        // ✅ Normalize reply shape:
+        
         // Backend: { success, message, data: { response: "..." } }
         const reply =
-            response?.data?.response ??   // preferred (your backend)
-            response?.reply ??            // fallback if it ever changes
-            response?.message ??          // final fallback text
+            response?.data?.response ??   
+            response?.reply ??           
+            response?.message ??         
             'Okay!';
 
         hideTyping();

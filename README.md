@@ -1,4 +1,4 @@
-# FishDex - Frontend
+# 🐟 FishDex - Frontend
 
 A mobile-first web application for identifying and cataloging fish species through AI-powered image recognition.
 
